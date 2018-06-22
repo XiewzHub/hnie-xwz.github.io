@@ -76,7 +76,7 @@
         
   
     <h1 itemprop="name">
-      <a class="article-title" href="/2018/06/22/test-my-site/">test_my_site</a>
+      <a class="article-title" href="/2018/06/22/test-my-site/">hexo+github从入门到放弃</a>
     </h1>
   
 
@@ -84,14 +84,22 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h1 id="标提"><a href="#标提" class="headerlink" title="标提"></a>标提</h1><blockquote>
-<p>哈哈哈，看看吧</p>
-</blockquote>
+        <h1 id="关于hexo-github部署自己的blog"><a href="#关于hexo-github部署自己的blog" class="headerlink" title="关于hexo+github部署自己的blog"></a>关于hexo+github部署自己的blog</h1><ul>
+<li><h2 id="你可能会遇到的问题"><a href="#你可能会遇到的问题" class="headerlink" title="你可能会遇到的问题"></a>你可能会遇到的问题</h2><h3 id="1-使用hexo-d-命令没有反应"><a href="#1-使用hexo-d-命令没有反应" class="headerlink" title="1 使用hexo d 命令没有反应"></a>1 使用hexo d 命令没有反应</h3>因为你在配置文件<code>_config.yml</code>中的设置没有规范起来，规范的输入如下:</li>
+</ul>
+<figure class="highlight yml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">deploy:</span></span><br><span class="line"><span class="attr">  type:</span> <span class="string">git</span></span><br><span class="line"><span class="attr">  repo:</span> <span class="attr">https://hnie-xwz:***@github.com/hnie-xwz/hnie-xwz.github.io.git</span></span><br><span class="line"><span class="attr">  branch:</span> <span class="string">master</span></span><br></pre></td></tr></table></figure>
+<p>发现问题了吗？<br>请注意，每一个冒号“:”后面都必须要加入一个空格“ ”，否则无法识别远程仓库，导致无法部署到你的GitHub仓库中</p>
+<h3 id="2-hexo-d-命令有效果，但是出现错误"><a href="#2-hexo-d-命令有效果，但是出现错误" class="headerlink" title="2 hexo d 命令有效果，但是出现错误"></a>2 hexo d 命令有效果，但是出现错误</h3><ul>
+<li>如果出现下面错误<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line">fatal: HttpRequestException encountered.</span><br><span class="line">   ��������ʱ�����</span><br><span class="line">fatal: HttpRequestException encountered.</span><br><span class="line">   ��������ʱ�����</span><br><span class="line">bash: /dev/tty: No such device or address</span><br><span class="line">error: failed to execute prompt script (exit code 1)</span><br><span class="line">fatal: could not read Username for &apos;https://github.com&apos;: No error</span><br><span class="line">FATAL Something&apos;s wrong. Maybe you can find the solution here: http://hexo.io/docs/troubleshooting.html</span><br><span class="line">Error: fatal: HttpRequestException encountered.</span><br><span class="line">   ��������ʱ����</span><br><span class="line">fatal: HttpRequestException encountered.</span><br><span class="line">   ��������ʱ����</span><br><span class="line">bash: /dev/tty: No such device or address</span><br><span class="line">error: failed to execute prompt script (exit code 1)</span><br><span class="line">fatal: could not read Username for &apos;https://github.com&apos;: No error</span><br><span class="line"></span><br><span class="line">    at ChildProcess.&lt;anonymous&gt; (D:\myblog\node_modules\hexo-util\lib\spawn.js:37:17)</span><br><span class="line">    at emitTwo (events.js:126:13)</span><br><span class="line">    at ChildProcess.emit (events.js:214:7)</span><br><span class="line">    at ChildProcess.cp.emit (D:\myblog\node_modules\cross-spawn\lib\enoent.js:40:29)</span><br><span class="line">    at maybeClose (internal/child_process.js:925:16)</span><br><span class="line">    at Process.ChildProcess._handle.onexit (internal/child_process.js:209:5)</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+<p>这种问题可能是无法读取到git连接的用户名密码导致的，只需要修改<code>_config.yml</code>文件中的git地址即可，修改语法如下：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">repo: https://&lt;用户名&gt;:&lt;密码&gt;@github.com/hnie-xwz/hnie-xwz.github.io.git</span><br></pre></td></tr></table></figure></p>
+<p>需要在github的url中注明用户名密码</p>
 
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2018/06/22/test-my-site/" data-id="cjipp1xlk000158h3kkz1234o" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2018/06/22/test-my-site/" data-id="cjipqn1ba0000ish3r58clxd4" class="article-share-link">Share</a>
       
       
     </footer>
@@ -136,7 +144,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2018/06/22/hello-world/" data-id="cjipp1xl4000058h3luf6hcuu" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2018/06/22/hello-world/" data-id="cjipqn1d90001ish3w5mnija2" class="article-share-link">Share</a>
       
       
     </footer>
@@ -177,7 +185,7 @@
       <ul>
         
           <li>
-            <a href="/2018/06/22/test-my-site/">test_my_site</a>
+            <a href="/2018/06/22/test-my-site/">hexo+github从入门到放弃</a>
           </li>
         
           <li>
