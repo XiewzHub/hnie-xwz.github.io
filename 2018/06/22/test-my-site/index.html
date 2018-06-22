@@ -7,17 +7,17 @@
   
   <title>hexo+github从入门到放弃 | Hexo</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="关于hexo+github部署自己的blog 你可能会遇到的问题1 使用hexo d 命令没有反应因为你在配置文件_config.yml中的设置没有规范起来，规范的输入如下:  1234deploy:  type: git  repo: https://hnie-xwz:***@github.com/hnie-xwz/hnie-xwz.github.io.git  branch: master 发">
+  <meta name="description" content="关于hexo+github部署自己的blog 你可能会遇到的问题   1 使用hexo d 命令没有反应因为你在配置文件_config.yml中的设置没有规范起来，规范的输入如下: 1234deploy:  type: git  repo: https://hnie-xwz:***@github.com/hnie-xwz/hnie-xwz.github.io.git  branch: maste">
 <meta property="og:type" content="article">
 <meta property="og:title" content="hexo+github从入门到放弃">
 <meta property="og:url" content="http://yoursite.com/2018/06/22/test-my-site/index.html">
 <meta property="og:site_name" content="Hexo">
-<meta property="og:description" content="关于hexo+github部署自己的blog 你可能会遇到的问题1 使用hexo d 命令没有反应因为你在配置文件_config.yml中的设置没有规范起来，规范的输入如下:  1234deploy:  type: git  repo: https://hnie-xwz:***@github.com/hnie-xwz/hnie-xwz.github.io.git  branch: master 发">
+<meta property="og:description" content="关于hexo+github部署自己的blog 你可能会遇到的问题   1 使用hexo d 命令没有反应因为你在配置文件_config.yml中的设置没有规范起来，规范的输入如下: 1234deploy:  type: git  repo: https://hnie-xwz:***@github.com/hnie-xwz/hnie-xwz.github.io.git  branch: maste">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2018-06-22T08:52:56.563Z">
+<meta property="og:updated_time" content="2018-06-22T08:57:57.843Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="hexo+github从入门到放弃">
-<meta name="twitter:description" content="关于hexo+github部署自己的blog 你可能会遇到的问题1 使用hexo d 命令没有反应因为你在配置文件_config.yml中的设置没有规范起来，规范的输入如下:  1234deploy:  type: git  repo: https://hnie-xwz:***@github.com/hnie-xwz/hnie-xwz.github.io.git  branch: master 发">
+<meta name="twitter:description" content="关于hexo+github部署自己的blog 你可能会遇到的问题   1 使用hexo d 命令没有反应因为你在配置文件_config.yml中的设置没有规范起来，规范的输入如下: 1234deploy:  type: git  repo: https://hnie-xwz:***@github.com/hnie-xwz/hnie-xwz.github.io.git  branch: maste">
   
     <link rel="alternate" href="/atom.xml" title="Hexo" type="application/atom+xml">
   
@@ -86,9 +86,12 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h1 id="关于hexo-github部署自己的blog"><a href="#关于hexo-github部署自己的blog" class="headerlink" title="关于hexo+github部署自己的blog"></a>关于hexo+github部署自己的blog</h1><ul>
-<li><h2 id="你可能会遇到的问题"><a href="#你可能会遇到的问题" class="headerlink" title="你可能会遇到的问题"></a>你可能会遇到的问题</h2><h3 id="1-使用hexo-d-命令没有反应"><a href="#1-使用hexo-d-命令没有反应" class="headerlink" title="1 使用hexo d 命令没有反应"></a>1 使用hexo d 命令没有反应</h3>因为你在配置文件<code>_config.yml</code>中的设置没有规范起来，规范的输入如下:</li>
+        <blockquote>
+<h4 id="关于hexo-github部署自己的blog"><a href="#关于hexo-github部署自己的blog" class="headerlink" title="关于hexo+github部署自己的blog"></a>关于hexo+github部署自己的blog</h4><ul>
+<li><h2 id="你可能会遇到的问题"><a href="#你可能会遇到的问题" class="headerlink" title="你可能会遇到的问题"></a>你可能会遇到的问题</h2></li>
 </ul>
+</blockquote>
+<h3 id="1-使用hexo-d-命令没有反应"><a href="#1-使用hexo-d-命令没有反应" class="headerlink" title="1 使用hexo d 命令没有反应"></a>1 使用hexo d 命令没有反应</h3><p>因为你在配置文件<code>_config.yml</code>中的设置没有规范起来，规范的输入如下:</p>
 <figure class="highlight yml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">deploy:</span></span><br><span class="line"><span class="attr">  type:</span> <span class="string">git</span></span><br><span class="line"><span class="attr">  repo:</span> <span class="attr">https://hnie-xwz:***@github.com/hnie-xwz/hnie-xwz.github.io.git</span></span><br><span class="line"><span class="attr">  branch:</span> <span class="string">master</span></span><br></pre></td></tr></table></figure>
 <p>发现问题了吗？<br>请注意，每一个冒号“:”后面都必须要加入一个空格“ ”，否则无法识别远程仓库，导致无法部署到你的GitHub仓库中</p>
 <h3 id="2-hexo-d-命令有效果，但是出现错误"><a href="#2-hexo-d-命令有效果，但是出现错误" class="headerlink" title="2 hexo d 命令有效果，但是出现错误"></a>2 hexo d 命令有效果，但是出现错误</h3><ul>
@@ -101,7 +104,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2018/06/22/test-my-site/" data-id="cjipqn1ba0000ish3r58clxd4" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2018/06/22/test-my-site/" data-id="cjiprkc5t0000zch3k7nwkg3u" class="article-share-link">Share</a>
       
       
     </footer>
