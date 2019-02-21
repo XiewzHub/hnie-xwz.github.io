@@ -340,7 +340,7 @@
               
                 <span class="post-meta-item-text">更新于&#58;</span>
               
-              <time title="更新于" itemprop="dateModified" datetime="2019-02-21T11:27:13+08:00">
+              <time title="更新于" itemprop="dateModified" datetime="2019-02-21T14:54:13+08:00">
                 2019-02-21
               </time>
             
@@ -413,46 +413,20 @@
 
       
       
-        <div class="post-gallery" itemscope itemtype="http://schema.org/ImageGallery">
-          
-          
-            <div class="post-gallery-row">
-              <a class="post-gallery-img fancybox"
-                 href="/2019/02/20/MySQL-3307端口新增/image7.png" rel="gallery_cjse2mnd00001pgtybiry7n2t"
-                 itemscope itemtype="http://schema.org/ImageObject" itemprop="url">
-                <img src="/2019/02/20/MySQL-3307端口新增/image7.png" itemprop="contentUrl"/>
-              </a>
-            
-          
-
-          
-          </div>
-        </div>
-      
 
       
         
-          
-          
-本教程是在Windows下新建一个mysql的3307端口，在新端口下操作数据库不会影响到原来3306端口的数据
-
-本地环境本地安装的是MySQL5.7，采用安装版安装，不是解压版
-一，找到MySQL安装目录
-在mysql服务中查询安装目录参数
-
-1show variables like '%dir%';
-
-
-可以查询到basedir的参数，也就是本地的安装目录，进入目录可以看到如下结构
-
-
-二、复制安装文件并配置
-我们将MySQL Server 5.7文件夹整个复制到D盘，我复制到了D:\soft\目录下
-
-
-
-找到前面查到的datadir对应的目录，里面存放了之前数据库内的表数据文件等，
-          ...
+          <ul>
+<li>本教程是在Windows下新建一个mysql的<code>3307</code>端口，在新端口下操作数据库不会影响到原来<code>3306</code>端口的数据</li>
+</ul>
+<h1 id="本地环境"><a href="#本地环境" class="headerlink" title="本地环境"></a>本地环境</h1><p>本地安装的是<code>MySQL5.7</code>，采用安装版安装，<strong>不是解压版</strong></p>
+<h1 id="一，找到MySQL安装目录"><a href="#一，找到MySQL安装目录" class="headerlink" title="一，找到MySQL安装目录"></a>一，找到MySQL安装目录</h1><ul>
+<li>在mysql服务中查询安装目录参数</li>
+</ul>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">show</span> <span class="keyword">variables</span> <span class="keyword">like</span> <span class="string">'%dir%'</span>;</span><br></pre></td></tr></table></figure>
+<p><img src="/2019/02/20/MySQL-3307端口新增/image1.png" alt="img"></p>
+<ul>
+<li>可以查询到<code>basedir</code>的参数，也就是本地的安装目录，进入目录可以看到如下结构</li></ul>
           <!--noindex-->
           <div class="post-button text-center">
             <a class="btn" href="/2019/02/20/MySQL-3307端口新增/#more" rel="contents">
@@ -553,8 +527,8 @@
               
                 <span class="post-meta-item-text">更新于&#58;</span>
               
-              <time title="更新于" itemprop="dateModified" datetime="2018-08-21T16:00:33+08:00">
-                2018-08-21
+              <time title="更新于" itemprop="dateModified" datetime="2019-02-21T14:49:14+08:00">
+                2019-02-21
               </time>
             
           </span>
@@ -629,13 +603,9 @@
 
       
         
-          
-          Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub.
-Quick StartCreate a new post1$ hexo new "My New Post"
-More info: Writing
-Run server1$ hexo server
-More in
-          ...
+          <p>Welcome to <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="noopener">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="noopener">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="noopener">GitHub</a>.</p>
+<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">"My New Post"</span></span><br></pre></td></tr></table></figure>
+<p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="noopener">Writing</a></p>
           <!--noindex-->
           <div class="post-button text-center">
             <a class="btn" href="/2018/08/21/hello-world/#more" rel="contents">
@@ -736,8 +706,8 @@ More in
               
                 <span class="post-meta-item-text">更新于&#58;</span>
               
-              <time title="更新于" itemprop="dateModified" datetime="2018-08-21T17:01:11+08:00">
-                2018-08-21
+              <time title="更新于" itemprop="dateModified" datetime="2019-02-21T14:55:17+08:00">
+                2019-02-21
               </time>
             
           </span>
@@ -812,16 +782,11 @@ More in
 
       
         
-          
-          
-关于hexo+github部署自己的blog
-你可能会遇到的问题1 使用hexo d 命令没有反应因为你在配置文件_config.yml中的设置没有规范起来，规范的输入如下:
-1234deploy:  type: git  repo: https://hnie-xwz:***@github.com/hnie-xwz/hnie-xwz.github.io.git  branch: master
-发现问题了吗？请注意，每一个冒号“:”后面都必须要加入一个空格“ ”，否则无法识别远程仓库，导致无法部署到你的GitHub仓库中
-2 hexo d 命令有效果，但是出现错误
-如果出现下面错误
-12345
-          ...
+          <blockquote>
+<h4 id="关于hexo-github部署自己的blog"><a href="#关于hexo-github部署自己的blog" class="headerlink" title="关于hexo+github部署自己的blog"></a>关于hexo+github部署自己的blog</h4></blockquote>
+<h2 id="你可能会遇到的问题"><a href="#你可能会遇到的问题" class="headerlink" title="你可能会遇到的问题"></a>你可能会遇到的问题</h2><h3 id="1-使用hexo-d-命令没有反应"><a href="#1-使用hexo-d-命令没有反应" class="headerlink" title="1 使用hexo d 命令没有反应"></a>1 使用hexo d 命令没有反应</h3><p>因为你在配置文件<code>_config.yml</code>中的设置没有规范起来，规范的输入如下:</p>
+<figure class="highlight yml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">deploy:</span></span><br><span class="line"><span class="attr">  type:</span> <span class="string">git</span></span><br><span class="line"><span class="attr">  repo:</span> <span class="attr">https://hnie-xwz:***@github.com/hnie-xwz/hnie-xwz.github.io.git</span></span><br><span class="line"><span class="attr">  branch:</span> <span class="string">master</span></span><br></pre></td></tr></table></figure>
+<p>发现问题了吗？<br>请注意，每一个冒号“:”后面都必须要加入一个空格“ ”，否则无法识别远程仓库，导致无法部署到你的GitHub仓库中</p>
           <!--noindex-->
           <div class="post-button text-center">
             <a class="btn" href="/2018/06/22/test-my-site/#more" rel="contents">
@@ -921,7 +886,7 @@ More in
               
               <div class="site-state-item site-state-tags">
                 <a href="/tags/index.html">
-                  <span class="site-state-item-count">1</span>
+                  <span class="site-state-item-count">2</span>
                   <span class="site-state-item-name">标签</span>
                 </a>
               </div>
